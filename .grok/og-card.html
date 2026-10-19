@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: url("fonts/cormorant-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: url("fonts/cormorant-600.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: url("fonts/cormorant-600i.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Outfit";
+    src: url("fonts/outfit-500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Outfit";
+    src: url("fonts/outfit-600.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+  }
+  html, body { margin: 0; padding: 0; background: #4A2A1B; }
+  .card {
+    width: 1200px;
+    height: 630px;
+    box-sizing: border-box;
+    padding: 16px;
+    background: #4A2A1B;
+    position: relative;
+  }
+  .inner {
+    width: 1168px;
+    height: 598px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background:
+      radial-gradient(ellipse 70% 80% at 50% 46%, #FBF7F1 0%, #F4EADC 58%, #E9D5BE 100%);
+    box-shadow: inset 0 0 0 1.5px #E3A425;
+  }
+  .inner::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px rgba(227, 164, 37, 0.45);
+    pointer-events: none;
+  }
+  svg.art { position: absolute; inset: 0; width: 1168px; height: 598px; }
+  .lockup {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+  }
+  .place {
+    margin: 0 0 10px;
+    font-family: Outfit, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.46em;
+    color: #E3A425;
+    text-indent: 0.46em;
+  }
+  h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: 118px;
+    line-height: 0.8;
+    letter-spacing: 0.045em;
+    color: #4A2A1B;
+  }
+  .rule {
+    width: 72px;
+    height: 2px;
+    margin: 16px 0 12px;
+    background: linear-gradient(90deg, transparent, #E3A425 20%, #E3A425 80%, transparent);
+  }
+  .bbb {
+    margin: 0;
+    font-family: Outfit, sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: 0.42em;
+    text-indent: 0.42em;
+    color: #E3A425;
+    line-height: 1;
+  }
+  .tag {
+    margin: 12px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 28px;
+    letter-spacing: 0.01em;
+    color: #4A2A1B;
+    line-height: 1;
+  }
+  .slogan {
+    margin: 10px 0 0;
+    font-family: Outfit, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+    color: #9C3030;
+    line-height: 1;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="inner">
+      <svg class="art" viewBox="0 0 1168 598" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cakeSide" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#7A4630"/>
+            <stop offset="0.42" stop-color="#4A2A1B"/>
+            <stop offset="1" stop-color="#32180F"/>
+          </linearGradient>
+          <linearGradient id="cakeSide2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8A5340"/>
+            <stop offset="0.5" stop-color="#5C3422"/>
+            <stop offset="1" stop-color="#3A1E14"/>
+          </linearGradient>
+          <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F3C86A"/>
+            <stop offset="0.48" stop-color="#E3A425"/>
+            <stop offset="1" stop-color="#B78318"/>
+          </linearGradient>
+          <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#C9922A"/>
+            <stop offset="0.45" stop-color="#F0C15C"/>
+            <stop offset="1" stop-color="#C4891C"/>
+          </linearGradient>
+          <linearGradient id="drinkGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F8D98A"/>
+            <stop offset="0.42" stop-color="#E3A425"/>
+            <stop offset="1" stop-color="#E07A3D"/>
+          </linearGradient>
+          <linearGradient id="drinkRed" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#C45A4C"/>
+            <stop offset="1" stop-color="#9C3030"/>
+          </linearGradient>
+          <linearGradient id="wrap" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#E89055"/>
+            <stop offset="1" stop-color="#E07A3D"/>
+          </linearGradient>
+          <symbol id="cupcake" viewBox="-40 -36 80 112">
+            <path d="M-26 10 L-20 62 Q-20 70 0 70 Q20 70 20 62 L26 10 Z" fill="url(#wrap)"/>
+            <path d="M-16 12 L-12 64 H-5 L-8 12 Z" fill="#9C3030"/>
+            <path d="M-1 12 L1 64 H8 L6 12 Z" fill="#9C3030" opacity="0.9"/>
+            <path d="M12 12 L15 64 H21 L18 12 Z" fill="#7A2424" opacity="0.75"/>
+            <ellipse cx="-14" cy="8" rx="18" ry="13" fill="#F4EADC"/>
+            <ellipse cx="14" cy="10" rx="17" ry="13" fill="#E3A425"/>
+            <ellipse cx="0" cy="0" rx="20" ry="15" fill="#FFF9F3"/>
+            <ellipse cx="-2" cy="-2" rx="12" ry="8" fill="#F4EADC"/>
+            <circle cx="1" cy="-14" r="6.2" fill="#9C3030"/>
+            <ellipse cx="-1.2" cy="-16.2" rx="2.2" ry="1.2" fill="#F4EADC" opacity="0.7"/>
+          </symbol>
+        </defs>
+
+        <!-- left: celebration cake -->
+        <g transform="translate(168,8)">
+          <ellipse cx="0" cy="548" rx="128" ry="14" fill="#4A2A1B" opacity="0.13"/>
+          <ellipse cx="0" cy="532" rx="86" ry="13" fill="#C4891C"/>
+          <ellipse cx="0" cy="526" rx="76" ry="9" fill="#E3A425"/>
+          <path d="M-11 522 L-18 448 H18 L11 522 Z" fill="url(#gold)"/>
+          <ellipse cx="0" cy="446" rx="112" ry="16" fill="#C4891C"/>
+          <ellipse cx="0" cy="440" rx="104" ry="13" fill="url(#goldH)"/>
+          <ellipse cx="0" cy="436" rx="90" ry="9" fill="#F6D48A"/>
+
+          <path d="M-96 312 C-96 298 -70 286 0 286 C70 286 96 298 96 312 V400 C96 418 62 432 0 432 C-62 432 -96 418 -96 400 Z" fill="url(#cakeSide)"/>
+          <ellipse cx="0" cy="312" rx="96" ry="22" fill="#6B3E28"/>
+          <ellipse cx="-28" cy="308" rx="36" ry="8" fill="#8A5640" opacity="0.35"/>
+          <path d="M-90 324 C-74 346 -58 330 -44 356 C-32 334 -14 332 0 362 C14 332 32 338 48 360 C62 336 78 334 92 322 C70 340 36 346 0 346 C-40 346 -72 338 -90 324 Z" fill="url(#gold)"/>
+          <path d="M-94 368 C-50 384 50 384 94 368 C50 386 -50 386 -94 368" fill="#F4EADC"/>
+          <path d="M-22 378 C-46 364 -54 392 -24 396 C-52 406 -40 430 -16 408 C-6 428 14 428 22 408 C46 430 58 406 30 396 C60 392 50 364 26 378 C12 368 -10 368 -22 378 Z" fill="#E07A3D"/>
+          <circle cx="2" cy="392" r="8" fill="#C45A28"/>
+
+          <path d="M-66 196 C-66 184 -44 174 0 174 C44 174 66 184 66 196 V292 C66 308 40 320 0 320 C-40 320 -66 308 -66 292 Z" fill="url(#cakeSide2)"/>
+          <ellipse cx="0" cy="196" rx="66" ry="16" fill="#7A4632"/>
+          <path d="M-60 206 C-48 232 -34 214 -22 240 C-12 214 2 218 12 244 C24 216 40 214 58 204 C36 222 16 226 0 226 C-22 226 -44 218 -60 206 Z" fill="url(#gold)"/>
+          <ellipse cx="0" cy="184" rx="68" ry="20" fill="#F7EFE4"/>
+          <ellipse cx="0" cy="176" rx="46" ry="13" fill="#FFF9F3"/>
+          <path d="M-30 166 C-8 150 2 162 -6 174 C-16 164 -26 170 -30 166" fill="#E3A425"/>
+          <path d="M18 160 C36 148 46 162 34 172 C26 162 18 166 18 160" fill="#C9922A"/>
+          <circle cx="-16" cy="162" r="11" fill="#9C3030"/>
+          <circle cx="10" cy="154" r="13" fill="#9C3030"/>
+          <circle cx="28" cy="168" r="8.5" fill="#B23E38"/>
+          <ellipse cx="6" cy="148" rx="4.5" ry="2.2" fill="#F4EADC" opacity="0.65"/>
+          <ellipse cx="-20" cy="158" rx="3.2" ry="1.6" fill="#F4EADC" opacity="0.4"/>
+        </g>
+
+        <use href="#cupcake" x="78" y="470" width="92" height="128"/>
+
+        <!-- right: drinks + cupcake -->
+        <g transform="translate(930,168)">
+          <ellipse cx="78" cy="390" rx="70" ry="12" fill="#4A2A1B" opacity="0.12"/>
+          <path d="M22 18 L34 250 Q42 286 78 286 Q114 286 122 250 L134 18 Q78 36 22 18 Z" fill="url(#drinkRed)"/>
+          <ellipse cx="78" cy="22" rx="58" ry="14" fill="#C45448"/>
+          <ellipse cx="78" cy="18" rx="52" ry="10" fill="#9C3030"/>
+          <path d="M36 36 L44 240 Q50 262 64 266 L54 36 Q44 42 36 36 Z" fill="#fff" opacity="0.22"/>
+          <circle cx="128" cy="20" r="16" fill="#E07A3D"/>
+          <circle cx="128" cy="20" r="9" fill="#F4EADC"/>
+          <circle cx="128" cy="20" r="4" fill="#E07A3D"/>
+        </g>
+
+        <g transform="translate(1008,78)">
+          <ellipse cx="70" cy="430" rx="78" ry="13" fill="#4A2A1B" opacity="0.12"/>
+          <path d="M16 36 L30 330 Q38 368 74 368 Q110 368 118 330 L132 36 Q74 54 16 36 Z" fill="url(#drinkGold)"/>
+          <ellipse cx="74" cy="42" rx="60" ry="18" fill="#FFF9F3"/>
+          <ellipse cx="56" cy="34" rx="24" ry="12" fill="#F4EADC"/>
+          <ellipse cx="92" cy="36" rx="20" ry="11" fill="#FFFFFF" opacity="0.85"/>
+          <path d="M30 58 L40 320 Q48 346 62 350 L50 56 Q38 64 30 58 Z" fill="#fff" opacity="0.3"/>
+          <ellipse cx="74" cy="30" rx="58" ry="13" fill="none" stroke="#F4EADC" stroke-width="3" opacity="0.85"/>
+          <rect x="98" y="-8" width="7" height="92" rx="3.5" fill="#E07A3D" transform="rotate(14 101 30)"/>
+        </g>
+
+        <use href="#cupcake" x="1018" y="392" width="108" height="150"/>
+      </svg>
+
+      <div class="lockup">
+        <p class="place">SUNYANI</p>
+        <h1>YEHLIN</h1>
+        <div class="rule"></div>
+        <p class="bbb">BBB</p>
+        <p class="tag">Bakes, Bites & Brews</p>
+        <p class="slogan">Tasty Treats for Every Mood!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f4eadc;
+  --color-foam: #fffaf3;
+  --color-ink: #2a160f;
+  --color-chocolate: #4a2a1b;
+  --color-cocoa: #5e4032;
+  --color-gold: #e3a425;
+  --color-gold-deep: #6f4b09;
+  --color-berry: #9c3030;
+  --color-ember: #e07a3d;
+  --color-line: #e4d3bc;
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --font-sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --radius-card: 1.35rem;
+  --shadow-card: 0 18px 40px -28px rgb(42 22 15 / 0.55);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.25rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--color-cream);
+    color: var(--color-ink);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-deep);
+    outline-offset: 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 6.5rem;
+  }
+}
+
+#bakes,
+#bites,
+#brews {
+  scroll-margin-top: 3.6rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+.press {
+  transition: scale 150ms ease-out, background-color 180ms ease, color 180ms ease;
+}
+
+.press:active {
+  scale: 0.96;
+}
+
+.rise {
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.d1 { animation-delay: 70ms; }
+.d2 { animation-delay: 140ms; }
+.d3 { animation-delay: 210ms; }
+.d4 { animation-delay: 280ms; }
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ribbon {
+  overflow: hidden;
+  background: var(--color-chocolate);
+  color: var(--color-gold);
+}
+
+.ribbon-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.ribbon-set {
+  display: flex;
+  gap: 1.75rem;
+  padding: 0.7rem 0.875rem;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.seal {
+  display: grid;
+  place-items: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 999px;
+  border: 1.5px dashed var(--color-gold-deep);
+  color: var(--color-chocolate);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transform: rotate(-8deg);
+}
+
+.seal strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  font-weight: 650;
+}
+
+.hero-frame {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  background: var(--color-line);
+  box-shadow: var(--shadow-card);
+}
+
+.plate {
+  background: var(--color-foam);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.dish {
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  transition: transform 200ms ease;
+}
+
+.dish-photo {
+  width: 5.75rem;
+  height: 5.75rem;
+  margin: 0.7rem;
+  flex: none;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: var(--color-line);
+}
+
+.dish-copy {
+  min-width: 0;
+  flex: 1;
+  padding: 0.85rem 0.9rem 0.85rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in oklab, var(--color-foam) 75%, white) 0 22%, transparent 23%),
+    color-mix(in oklab, var(--color-gold) 40%, var(--color-cream));
+}
+
+.swatch span {
+  font-size: 0.95rem;
+  line-height: 1.05;
+  max-width: 4.6rem;
+}
+
+.swatch-ember {
+  background: color-mix(in oklab, var(--color-ember) 40%, var(--color-cream));
+}
+
+.swatch-milk {
+  background: color-mix(in oklab, var(--color-gold) 22%, var(--color-foam));
+}
+
+.badge {
+  align-self: flex-start;
+  margin-bottom: 0.3rem;
+  border-radius: 999px;
+  background: var(--color-berry);
+  color: var(--color-foam);
+  padding: 0.15rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.order-link {
+  margin-top: auto;
+  padding-top: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.75rem;
+  font-size: 0.92rem;
+  font-weight: 650;
+  color: var(--color-berry);
+}
+
+.note {
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--color-ember) 16%, var(--color-foam));
+  border: 1px solid color-mix(in oklab, var(--color-ember) 35%, var(--color-line));
+}
+
+.jump {
+  position: sticky;
+  top: 4.4rem;
+  z-index: 20;
+  background: color-mix(in oklab, var(--color-cream) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.dock {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+@media (min-width: 640px) {
+  .dish {
+    flex-direction: column;
+  }
+
+  .dish-photo {
+    width: 100%;
+    height: 13rem;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .dish-copy {
+    padding: 1rem 1rem 1.05rem;
+  }
+
+  .swatch span {
+    font-size: 1.65rem;
+    max-width: 9rem;
+  }
+}
+
+@media (hover: hover) {
+  .dish:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .rise,
+  .ribbon-track {
+    animation: none;
+  }
+
+  .press,
+  .dish {
+    transition: none;
+  }
+
+  .seal {
+    transform: none;
+  }
+}

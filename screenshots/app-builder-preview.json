@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "YEHLIN BBB — Bakes, Bites & Brews",
+      "hasCanvas": false,
+      "bodyTextLen": 3438,
+      "bodyTextHash": "dd617f9adc102a1bb00f1a73ebefc00e50428d9bba5c96030f82f57e573e92d2",
+      "bodyTextPrefix": "Skip to menu YEHLIN BBB Menu Why us Order WhatsApp SUNYANI YEHLI",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "YEHLIN BBB — Bakes, Bites & Brews",
+      "hasCanvas": false,
+      "bodyTextLen": 3443,
+      "bodyTextHash": "7f2cadf3440413250244f85fd70cddc948d11468526471f773d3bf667172306d",
+      "bodyTextPrefix": "Skip to menu YEHLIN BBB Menu Why us Order SUNYANI YEHLIN BBB Bak",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
